@@ -3,7 +3,7 @@
     <string name="sample_text">Visiting card + extra stuff</string>
     <string name="tab_text_1">About Me</string>
     <string name="tab_text_2">My Activity</string>
-    <string name="recycler_view_text">Recycler view item no %s</string>
+    <string name="recycler_view_text">Post no %s</string>
 
     <string name="large_text">
 

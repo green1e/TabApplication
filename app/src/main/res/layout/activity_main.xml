@@ -13,18 +13,20 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="360dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:minHeight="?actionBarSize"
-            android:padding="@dimen/appbar_padding"
+            android:paddingVertical="100dp"
             android:text="@string/sample_text"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+            app:layout_scrollFlags="scroll" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_scrollFlags="noScroll"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -34,12 +36,28 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_disable_scroll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Disable\nScroll"
+        android:textAllCaps="false"
+        android:paddingHorizontal="10dp"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:background="@color/teal_200"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_enable_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:paddingHorizontal="10dp"
+        android:text="Enable\nScroll"
+        android:textAllCaps="false"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/teal_200"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

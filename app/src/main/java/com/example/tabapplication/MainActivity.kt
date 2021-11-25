@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.tabapplication.ui.main.SectionsPagerAdapter
 import com.example.tabapplication.databinding.ActivityMainBinding
+import com.google.android.material.appbar.AppBarLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,11 +27,17 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
-        val fab: FloatingActionButton = binding.fab
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        binding.btnDisableScroll.setOnClickListener { view ->
+            val params = binding.title.layoutParams as AppBarLayout.LayoutParams
+            params.scrollFlags = AppBarLayout.LayoutParams.SCROLL_FLAG_NO_SCROLL
+            binding.title.layoutParams = params
+        }
+
+        binding.btnEnableScroll.setOnClickListener {
+            val params = binding.title.layoutParams as AppBarLayout.LayoutParams
+            params.scrollFlags = AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL
+            binding.title.layoutParams = params
         }
     }
 }

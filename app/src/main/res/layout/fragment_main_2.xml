@@ -7,6 +7,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/large_text"/>
+        android:text="@string/app_name"/>
 
 </androidx.core.widget.NestedScrollView>
